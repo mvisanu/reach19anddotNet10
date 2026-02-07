@@ -2,11 +2,17 @@ import { createRoot } from "react-dom/client";
 
 const root = createRoot(document.getElementById("root"));
 
+const pageStyle = {
+  textAlign: "center",
+  backgroundColor: "lightgray",
+  padding: "10px",
+};
+
 export function HomePage() {
   return (
     <div>
       <Header />
-      <h1>We are excited to learn react</h1>
+      <p className="customerHeading">We are excited to learn react</p>
       <Footer />
     </div>
   );
@@ -14,7 +20,7 @@ export function HomePage() {
 export function Header() {
   return (
     <div>
-      <h1 style={{ "text-align": "center" }}>Welcome to React Course</h1>
+      <h1 style={pageStyle} className="text-success">Welcome to React Course</h1>
     </div>
   );
 }
@@ -27,7 +33,7 @@ export function Footer() {
   );
 }
 root.render(
-  <di>
+  <div>
     <HomePage />
-  </di>,
+  </div>,
 );
